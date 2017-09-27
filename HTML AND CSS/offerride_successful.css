@@ -1,0 +1,14 @@
+body {
+	font-family: montserrat, arial, verdana;
+	background: url('http://s13.postimg.org/x7fzfnd13/success.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+#content{
+	font-family: 'Exo', sans-serif;
+	position:relative;
+	left:200px;
+	top:150px;
+}

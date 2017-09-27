@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Welcome to TaxiShare</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    
+    <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      @import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+      @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+    </style>
+
+
+  </head>
+  <body>
+	<?php
+		$fnameinp=$_POST["fname"];
+		$snameinp=$_POST["sname"];
+		$userinp=$_POST["user"];
+		$passwordinp=$_POST["password"];
+		$emailinp=$_POST["email"];
+		$mobilenuminp=$_POST["mobilenum"];
+		$sexinp=$_POST["sex"];
+		$conn1 = mysql_connect("localhost","root","ltw23");
+		if(!$conn1) {
+			die('Could not connect : '.mysql_error());
+		}
+		mysql_select_db("taxi");
+		$result_acc = mysql_query("INSERT INTO userinfo VALUES('$fnameinp','$snameinp','$userinp','$emailinp','$mobilenuminp','$passwordinp','$sexinp');",$conn1);
+		mysql_close($conn1);
+		$head="Sign Up successful, Login now!";
+	?>
+	<div class="body"></div>
+	<div class="grad"></div>
+	<div class="header">
+		<div id="cname" >Taxi<span>Share</span></div>
+		<img id="cicon" src="http://s2.postimg.org/na0idpbkp/cicon.png">
+	</div>
+    
+  </body>
+  <script src="js/index.js"></script>
+</html>

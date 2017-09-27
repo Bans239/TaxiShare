@@ -1,0 +1,11 @@
+<?php
+    $key=$_GET['z'];
+    $array = array();
+    include 'config.php';
+    $query=mysql_query("select source from ride where source LIKE '{$key}%'");
+    while($row=mysql_fetch_assoc($query))
+    {
+      $array[] = $row['source'];
+    }
+    echo json_encode($array);
+?>

@@ -1,0 +1,247 @@
+/*custom font*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+body {
+	font-family: montserrat, arial, verdana;
+}
+/*form styles*/
+#msform {
+	width: 430px;
+	margin: 50px auto;
+	position: relative;
+	left:-370px;
+	top:30px;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	
+	/*stacking fieldsets above each other*/
+	position: absolute;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#depart,#arrival,.stopover,#dateforride,#timeofride ,#numofseats,#carname,#destarrivprice,#destspprice1,#destspprice2,#destspprice3,#destspprice4,#destspprice5,#destspprice6,#destspprice7,#destspprice8,#destspprice9,#destspprice10{
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #0057E7;
+	font-size: 13px;
+}
+#luggage,#timewindow,#detour{
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #0057E7;
+	font-size: 13px;
+	background-color:white;
+}
+#luggage{
+	width:32%;
+	position:relative;
+	left:30px;
+}
+#timewindow{
+	width:66%;
+	position:relative;
+	left:22px;
+}
+#detour{
+	width:46%;
+}
+#destsp1,#destsp2,#destsp3,#destsp4,#destsp5,#destsp6,#destsp7,#destsp8,#destsp9,#destsp10{
+	color:#FFA700;
+	font-size:13px;
+}
+#destarriv{
+	color:#008744;
+	font-size:13px;
+}
+#tandc{
+	color:#0057E7;
+	font-size:13px;
+}
+#destarrivprice,#destspprice1,#destspprice2,#destspprice3,#destspprice4,#destspprice5,#destspprice6,#destspprice7,#destspprice8,#destspprice9,#destspprice10{
+	width:25%;
+	padding:5px;
+	float:right;
+	position:relative;
+	top:-3px;
+}
+/*buttons*/
+#msform .action-button {
+	width: 100px;
+	background: #0057E7;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #0057E7;
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #0057E7;
+	margin-bottom: 10px;
+	text-align:center;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+	text-align:center;
+}
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+	position:relative;
+	left:70px;
+	text-align:center;
+}
+#progressbar li {
+	list-style-type: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 33.33%;
+	float: left;
+	position: relative;
+	text-align:center;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+	text-align:center;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+	text-align:center;
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+	text-align:center;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #0057E7;
+	color: white;
+	text-align:center;
+}
+#field1,#field2,#field3,#field4,#field5,#field6,#field7,#field8,#field9,#field10,#field11,#field12,#field13,#field14,#field15,#field16,#field17,#field18{
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 80%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #0057E7;
+	font-size: 13px;
+}
+#b1{
+	background: url('http://s22.postimg.org/ubliy0qh9/plus.png') no-repeat;
+	background-size:40%;
+	background-position:center;
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	height:48px;
+	width: 20%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #0057E7;
+	font-size: 13px;
+	position:relative;
+	top:3px;
+}
+#remove1,#remove2,#remove3,#remove4,#remove5,#remove6,#remove7,#remove8,#remove9,#remove10,#remove11,#remove12,#remove13,#remove14,#remove15,#remove16,#remove17,#remove18
+{
+	background: url('http://s7.postimg.org/mqursqfqv/minus.png') no-repeat;
+	background-size:40%;
+	background-position:center;
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	height:48px;
+	width: 20%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #0057E7;
+	font-size: 13px;
+	position:relative;
+	top:3px;
+}
+.errors{
+	text-align:left;
+	font-size: 10px;
+	position:relative;
+	top:-5px;
+	color:#d62d20;
+}
+#luggagemess,#detourmess,#timewindowmess{
+	font-size:13px;
+	color:#008744;
+}
+#pricetag{
+	font-size:16px;
+	color:#008744;
+}
+#foot{
+	position:relative;
+	top:1000px;
+	width:100%;
+	height:100px;
+	background-color:black;
+	z-index:-1;
+}

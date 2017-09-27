@@ -1,0 +1,7 @@
+create database taxi;
+use taxi;
+create table userinfo(fname VARCHAR(20) NOT NULL,sname VARCHAR(20) NOT NULL,user VARCHAR(20) NOT NULL PRIMARY KEY,email VARCHAR(50) NOT NULL,mobilenum BIGINT NOT NULL,password VARCHAR(25) NOT NULL,sex VARCHAR(7) NOT NULL);
+create table ride(rideid BIGINT PRIMARY KEY AUTO_INCREMENT,ruser VARCHAR(20) NOT NULL,date VARCHAR(10) NOT NULL,time VARCHAR(10) NOT NULL,car VARCHAR(20) NOT NULL,numofseats BIGINT NOT NULL,luggage VARCHAR(7) NOT NULL,timewindow INT NOT NULL,detour INT NOT NULL,depart VARCHAR(20) NOT NULL);
+create table destination(destid BIGINT PRIMARY KEY AUTO_INCREMENT,drideid BIGINT NOT NULL,arrival VARCHAR(20) NOT NULL,price BIGINT NOT NULL);
+ALTER table ride add constraint 1_const foreign key(ruser) references userinfo(user) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER table destination add constraint 2_const foreign key(drideid) references ride(rideid) ON DELETE CASCADE ON UPDATE CASCADE;

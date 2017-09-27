@@ -1,0 +1,50 @@
+#yellowb{
+	position:absolute;
+	left:370px;
+	top:11px;
+}
+#greenb{
+	position:absolute;
+	left:500px;
+	top:11px;
+}
+.animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.action-button
+{
+	position: relative;
+	padding: 5px 20px;
+  	margin: 0px 5px 5px 0px;
+  	float: left;
+	border-radius: 5px;
+	font-family: 'Exo', sans-serif;
+	font-size: 15px;
+	color: #FFF;
+	text-decoration: none;	
+}
+
+
+.green
+{
+	background-color: #008744;
+	border-bottom: 2.5px solid #006633;
+	text-shadow: 0px -1px #669644;
+}
+
+.red
+{
+	background-color: #D62D20;
+	border-bottom: 2.5px solid #996400;
+	text-shadow: 0px -1px #D1B358;
+}
+
+.action-button:active
+{
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
